@@ -1,0 +1,96 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.game-container {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+    margin-bottom: 20px;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 36px;
+    cursor: pointer;
+}
+
+.game-info {
+    margin-bottom: 20px;
+}
+
+#message {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px; 
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.scoreboard {
+    margin-top: 20px;
+    font-family: 'Courier New', Courier, monospace; /* New font family */
+}
+
+.scoreboard h3 {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.scoreboard p {
+    font-size: 16px;
+}
+
+@media (max-width: 500px) {
+    .game-container {
+        width: 90%;
+    }
+
+    .cell {
+        width: 80px;
+        height: 80px;
+        font-size: 28px;
+    }
+}
+.winning-cell {
+    background-color: #90ee90; /* Light green for winning cells */
+    color: #000; /* Ensure the text is readable */
+    font-weight: bold;
+}
